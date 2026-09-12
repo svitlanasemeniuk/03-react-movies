@@ -17,15 +17,13 @@ const App = () => {
 
   const handleSearch = async (query: string) => {
     try {
-      // 1. Скидаємо старі дані перед новим пошуком
+
       setMovies([]);
       setIsError(false);
       setIsLoading(true);
 
-      // 2. Робимо запит
       const data = await fetchMovies(query);
 
-      // 3. Перевіряємо, чи є результати
       if (data.length === 0) {
         toast.error('No movies found for your request.');
         return;
@@ -35,7 +33,7 @@ const App = () => {
     } catch {
       setIsError(true);
     } finally {
-      setIsLoading(false); // Вимикаємо лоадер за будь-якого результату
+      setIsLoading(false); 
     }
   };
 

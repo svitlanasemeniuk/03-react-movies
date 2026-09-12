@@ -7,7 +7,7 @@ interface MovieGridProps {
 }
 
 const MovieGrid = ({ movies, onSelect }: MovieGridProps) => {
-  // Виконання вимоги: якщо масив порожній, компонент повертає null і не малюється
+
   if (movies.length === 0) {
     return null;
   }
